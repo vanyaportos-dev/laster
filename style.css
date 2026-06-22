@@ -543,3 +543,67 @@ h1,h2,h3{ font-family:var(--font-display); letter-spacing:-0.02em; }
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
 }
+
+/* ===================== ПОДКЛЮЧЕНИЕ К СЕРВЕРУ ===================== */
+#connect-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2f9; /* Твой светлый фон, чтобы не выбивался */
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#connect-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.connect-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 300px;
+  padding: 48px 36px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.connect-spinner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid rgba(15, 23, 42, 0.06);
+  border-top-color: #3b82f6;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 4px;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.connect-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.connect-text.request {
+  color: #64748b;
+}
+.connect-text.response {
+  color: #64748b;
+}
+.connect-text.response .ok {
+  color: #16a34a;
+  font-weight: 600;
+}
+.hidden {
+  display: none !important;
+}
