@@ -573,4 +573,5 @@ h1,h2,h3{ font-family:var(--font-display); letter-spacing:-0.02em; }
   height: 120px;
   object-fit: contain;
   filter: drop-shadow(0 0 40px rgba(216, 27, 96, 0.4));
+  will-change: transform; /* 🔥 Это заставит телефон крутить плавно, без дерганья */
 }
