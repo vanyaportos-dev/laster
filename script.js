@@ -440,5 +440,5 @@ const brandLoader = document.getElementById('brand-loader');
 window.addEventListener('load', () => {
   setTimeout(() => {
     brandLoader.classList.add('hidden');
-  }, 2000); // 2 секунды крутится и исчезает
+  }, 3500); // 2 секунды крутится и исчезает
 });
