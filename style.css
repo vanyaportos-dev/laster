@@ -570,6 +570,6 @@ h1,h2,h3{ font-family:var(--font-display); letter-spacing:-0.02em; }
   filter: drop-shadow(0 0 40px rgba(216, 27, 96, 0.4));
   
   /* Центрирование через Flex (безопасный метод) */
-  position: relative;
-  margin: auto;
+  position: absolute;
+top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
