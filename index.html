@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laster — Разработчик и владелец CRMP-студии</title>
+<meta name="description" content="Laster — владелец CRMP-студии. Разработка сайтов, лендингов и продуктов на Next.js.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230f172a'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='800' fill='%233b82f6' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="grid-bg"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#about" class="logo" aria-label="Laster">
+      <span class="logo-mark">L</span>
+      <span class="logo-text">Laster<span class="logo-dot">.</span></span>
+    </a>
+
+    <div class="lang-switcher">
+      <button class="lang-btn" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+        <i data-lucide="globe"></i>
+        <span id="langCurrent">RU</span>
+        <i data-lucide="chevron-down" class="lang-chev"></i>
+      </button>
+      <ul class="lang-dropdown" id="langDropdown" role="listbox">
+        <li role="option" data-lang="ru" class="lang-option is-active">
+          <i data-lucide="check"></i><span>Русский</span>
+        </li>
+        <li role="option" data-lang="en" class="lang-option">
+          <i data-lucide="check"></i><span>English</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section hero-section">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="spotlight" id="spotlight"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="eyebrow"><i data-lucide="terminal-square"></i><span data-i18n="heroEyebrow">CRMP STUDIO · ВЕБ-РАЗРАБОТКА</span></span>
+
+        <h1 class="hero-title">
+          <span data-i18n="heroTitleLine1">Привет, я</span>
+          <span class="accent-text">Laster</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Владелец CRMP-студии. Разработчик сайтов на HTML и Next.js.</p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-open-modal>
+            <i data-lucide="send"></i><span data-i18n="ctaApply">Оставить заявку</span>
+          </button>
+          <a href="https://t.me/Lasterc" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i data-lucide="message-circle"></i><span data-i18n="ctaTelegram">Написать в Telegram</span>
+          </a>
+        </div>
+
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="statusOpen">Открыт для новых заказов</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="code-card">
+          <div class="code-card-head">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="code-card-title">laster.studio</span>
+          </div>
+          <div class="code-card-body">
+            <div class="code-line"><span class="code-kw">const</span> <span class="code-var">studio</span> <span class="code-op">=</span> {</div>
+            <div class="code-line indent"><span class="code-prop">owner</span>: <span class="code-str">'Laster'</span>,</div>
+            <div class="code-line indent"><span class="code-prop">focus</span>: <span class="code-str">'CRMP'</span>,</div>
+            <div class="code-line indent"><span class="code-prop">stack</span>: [<span class="code-str">'Next.js'</span>, <span class="code-str">'Node'</span>],</div>
+            <div class="code-line indent"><span class="code-prop">status</span>: <span class="code-str">'available'</span></div>
+            <div class="code-line">}</div>
+            <div class="code-line code-caret"><span class="caret">▍</span></div>
+          </div>
+        </div>
+        <div class="float-tag tag-react">React</div>
+        <div class="float-tag tag-next">Next.js</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section skills-section">
+    <div class="container">
+      <div class="skill-cards">
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i data-lucide="code-2"></i></div>
+          <h3 data-i18n="skillFrontendTitle">Frontend</h3>
+          <p data-i18n="skillFrontendDesc">Собираю интерфейсы на React и Next.js — с анимациями, чистой версткой и вниманием к каждой детали.</p>
+        </div>
+        <div class="skill-card reveal" style="--delay:0.1s">
+          <div class="skill-icon"><i data-lucide="server"></i></div>
+          <h3 data-i18n="skillBackendTitle">Backend</h3>
+          <p data-i18n="skillBackendDesc">Проектирую API и базы данных на Node.js, PostgreSQL, MongoDB и Redis. Стабильность и скорость прежде всего.</p>
+        </div>
+        <div class="skill-card reveal" style="--delay:0.2s">
+          <div class="skill-icon"><i data-lucide="palette"></i></div>
+          <h3 data-i18n="skillDesignTitle">Design</h3>
+          <p data-i18n="skillDesignDesc">От вайрфрейма в Figma до готового интерфейса — чувствую баланс между эстетикой и удобством.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee-wrap reveal">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- items injected twice for seamless loop -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section id="work" class="section work-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><i data-lucide="layers"></i><span data-i18n="workEyebrow">УСЛУГИ</span></span>
+        <h2 data-i18n="workTitle">Мои услуги</h2>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="globe-2"></i></div>
+          <h3 data-i18n="serviceSitesTitle">Сайты</h3>
+          <p data-i18n="serviceSitesDesc">Многостраничные сайты под бизнес — от концепции до деплоя на сервер.</p>
+        </div>
+        <div class="service-card reveal" style="--delay:0.08s">
+          <div class="service-icon"><i data-lucide="zap"></i></div>
+          <h3 data-i18n="serviceLandingTitle">Лендинги</h3>
+          <p data-i18n="serviceLandingDesc">Одностраничники с фокусом на конверсию, скорость загрузки и аккуратную анимацию.</p>
+        </div>
+        <div class="service-card reveal" style="--delay:0.16s">
+          <div class="service-icon"><i data-lucide="layout-template"></i></div>
+          <h3 data-i18n="servicePortfolioTitle">Портфолио</h3>
+          <p data-i18n="servicePortfolioDesc">Личные сайты для дизайнеров, разработчиков и творческих профессий.</p>
+        </div>
+        <div class="service-card reveal" style="--delay:0.24s">
+          <div class="service-icon"><i data-lucide="users"></i></div>
+          <h3 data-i18n="serviceForumTitle">Форумы</h3>
+          <p data-i18n="serviceForumDesc">Сообщества и форумы под CRMP-проекты, готовые к нагрузке и росту аудитории.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><i data-lucide="folder-git-2"></i><span data-i18n="projectsEyebrow">ПРОЕКТЫ</span></span>
+        <h2 data-i18n="projectsTitle">Проекты</h2>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-visual" aria-hidden="true">
+          <div class="phone-mock">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="bubble bubble-in">
+                <span class="bubble-line w70"></span>
+                <span class="bubble-line w40"></span>
+              </div>
+              <div class="bubble bubble-out">
+                <span class="bubble-line w60"></span>
+              </div>
+              <div class="bubble bubble-in">
+                <span class="bubble-line w50"></span>
+                <span class="bubble-line w80"></span>
+              </div>
+              <div class="typing-row"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="shield-badge"><i data-lucide="shield-check"></i></div>
+        </div>
+
+        <div class="project-info">
+          <div class="project-top">
+            <h3>Laster</h3>
+            <span class="badge badge-status" tabindex="-1">
+              <span class="pulse-dot small"></span>
+              <span data-i18n="projectStatus">В разработке</span>
+            </span>
+          </div>
+
+          <p data-i18n="projectDesc">Laster — новый клиент Telegram. Абсолютно безопасен, так как работает на базе Telegram API, не читает ваши переписки и не требует VPN.</p>
+
+          <div class="project-stack">
+            <span class="tag"><i data-lucide="send"></i>Telegram API</span>
+            <span class="tag"><i data-lucide="cpu"></i>C++</span>
+            <span class="tag"><i data-lucide="hexagon"></i>Node.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section cta-section">
+    <div class="container cta-inner reveal">
+      <h2 data-i18n="ctaSectionTitle">Готовы начать проект?</h2>
+      <p data-i18n="ctaSectionSubtitle">Опишите задачу в форме — отвечу в Telegram или на почту в течение дня.</p>
+      <button class="btn btn-primary btn-lg" data-open-modal>
+        <i data-lucide="send"></i><span data-i18n="ctaApply">Оставить заявку</span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">L</span>
+      <span class="logo-text">Laster<span class="logo-dot">.</span></span>
+    </div>
+
+    <div class="footer-contacts">
+      <a href="mailto:vanyaportos@gmail.com" class="footer-link">
+        <i data-lucide="mail"></i><span>vanyaportos@gmail.com</span>
+      </a>
+      <a href="https://vk.com/wicebag" target="_blank" rel="noopener" class="footer-link">
+        <img src="https://cdn.simpleicons.org/vk/60a5fa" alt="" class="brand-icon" width="16" height="16"><span>@wicebag</span>
+      </a>
+      <a href="https://t.me/Lasterc" target="_blank" rel="noopener" class="footer-link">
+        <img src="https://cdn.simpleicons.org/telegram/60a5fa" alt="" class="brand-icon" width="16" height="16"><span>@Lasterc</span>
+      </a>
+    </div>
+
+    <p class="footer-copy" data-i18n="footerCopy">© 2026 Laster. Все права защищены.</p>
+  </div>
+</footer>
+
+<!-- ===================== CAPSULE NAV ===================== -->
+<nav class="capsule-nav" id="capsuleNav" aria-label="Главная навигация">
+  <span class="capsule-indicator" id="capsuleIndicator"></span>
+  <button class="capsule-item is-active" data-target="about">
+    <i data-lucide="user-round"></i><span data-i18n="navAbout">О себе</span>
+  </button>
+  <button class="capsule-item" data-target="work">
+    <i data-lucide="briefcase"></i><span data-i18n="navWork">Работа</span>
+  </button>
+  <button class="capsule-item" data-target="projects">
+    <i data-lucide="folder-git-2"></i><span data-i18n="navProjects">Проекты</span>
+  </button>
+</nav>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">
+      <i data-lucide="x"></i>
+    </button>
+
+    <span class="eyebrow"><i data-lucide="send"></i><span data-i18n="modalEyebrow">НОВАЯ ЗАЯВКА</span></span>
+    <h3 id="modalTitle" data-i18n="modalTitle">Оставить заявку</h3>
+    <p class="modal-sub" data-i18n="modalSub">Заполните форму — я свяжусь с вами в Telegram или на почте.</p>
+
+    <form id="orderForm" novalidate>
+      <div class="field">
+        <label for="f-name" data-i18n="formNameLabel">Имя</label>
+        <input id="f-name" name="from_name" type="text" maxlength="60" required autocomplete="off" data-i18n-placeholder="formNamePh" placeholder="Как к вам обращаться?">
+        <span class="char-count"><span class="count-now">0</span>/60</span>
+      </div>
+
+      <div class="field">
+        <label for="f-contact" data-i18n="formContactLabel">Контакт</label>
+        <input id="f-contact" name="contact" type="text" maxlength="60" required autocomplete="off" data-i18n-placeholder="formContactPh" placeholder="Telegram, VK или email">
+        <span class="char-count"><span class="count-now">0</span>/60</span>
+      </div>
+
+      <div class="field">
+        <label for="f-budget" data-i18n="formBudgetLabel">Бюджет</label>
+        <input id="f-budget" name="budget" type="text" maxlength="60" required autocomplete="off" data-i18n-placeholder="formBudgetPh" placeholder="Например, 15 000 ₽">
+        <span class="char-count"><span class="count-now">0</span>/60</span>
+      </div>
+
+      <div class="field">
+        <label for="f-desc" data-i18n="formDescLabel">Описание</label>
+        <textarea id="f-desc" name="message" maxlength="60" required data-i18n-placeholder="formDescPh" placeholder="Кратко опишите задачу"></textarea>
+        <span class="char-count"><span class="count-now">0</span>/60</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="formSubmit">
+        <span class="btn-label"><i data-lucide="send"></i><span data-i18n="formSubmit">Отправить заявку</span></span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ===================== TOAST ===================== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <i data-lucide="check-circle-2" class="toast-icon"></i>
+  <div class="toast-text">
+    <strong id="toastTitle">Заявка отправлена</strong>
+    <span id="toastMsg">Я свяжусь с вами в ближайшее время.</span>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>
