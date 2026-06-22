@@ -433,27 +433,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-/* ===================== ПОДКЛЮЧЕНИЕ К СЕРВЕРУ ===================== */
-const overlay = document.getElementById('connect-overlay');
-const reqText = document.getElementById('connect-request');
-const resText = document.getElementById('connect-response');
-
-window.addEventListener('load', () => {
-  // Через 1.2 секунды "приходит ответ"
-  setTimeout(() => {
-    reqText.style.opacity = '0';
-    resText.classList.remove('hidden');
-    resText.style.opacity = '0';
-    
-    setTimeout(() => {
-      resText.style.opacity = '1';
-    }, 50);
-
-    // Ещё через 1 секунду скрываем весь блок
-    setTimeout(() => {
-      overlay.classList.add('hidden');
-    }, 1000);
-    
-  }, 1200);
-});
