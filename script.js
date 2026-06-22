@@ -433,3 +433,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+/* ===================== ПРЕЛОАДЕР: ЛОГОТИП НА ФОНЕ ===================== */
+const brandLoader = document.getElementById('brand-loader');
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    brandLoader.classList.add('hidden');
+  }, 2000); // 2 секунды крутится и исчезает
+});
