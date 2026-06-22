@@ -434,11 +434,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* ===================== ПРЕЛОАДЕР: ЛОГОТИП НА ФОНЕ ===================== */
+/* ===================== ПРЕЛОАДЕР: ВРАЩЕНИЕ ЧЕРЕЗ JS ===================== */
 const brandLoader = document.getElementById('brand-loader');
+const star = document.querySelector('.brand-loader-star');
 
-window.addEventListener('load', () => {
+let angle = 0;
+
+if (star && brandLoader) {
+  // Запускаем вращение
+  const rotateInterval = setInterval(() => {
+    angle += 2; // Скорость вращения (чем больше число, тем быстрее)
+    star.style.transform = `rotate(${angle}deg)`;
+  }, 20);
+
+  // Через 3.5 секунды всё останавливаем и прячем
   setTimeout(() => {
-    brandLoader.classList.add('hidden'); // <--- ВОТ ЭТА СТРОЧКА БЫЛА УТЕРЯНА
-  }, 3500); 
-});
+    clearInterval(rotateInterval);
+    brandLoader.classList.add('hidden');
+  }, 3500);
+}
