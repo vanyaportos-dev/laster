@@ -552,7 +552,13 @@ h1,h2,h3{ font-family:var(--font-display); letter-spacing:-0.02em; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #eef2f9; /* Твой светлый фон сайта */
+  background: #eef2f9;
+  
+  /* 🔥 Эти строчки убирают лаги на телефонах */
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
