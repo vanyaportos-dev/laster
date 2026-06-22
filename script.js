@@ -439,6 +439,6 @@ const brandLoader = document.getElementById('brand-loader');
 
 window.addEventListener('load', () => {
   setTimeout(() => {
-    brandLoader.classList.add('hidden');
-  }, 3500); // 2 секунды крутится и исчезает
+    brandLoader.classList.add('hidden'); // <--- ВОТ ЭТА СТРОЧКА БЫЛА УТЕРЯНА
+  }, 3500); 
 });
