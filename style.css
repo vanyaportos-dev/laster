@@ -566,10 +566,14 @@ h1,h2,h3{ font-family:var(--font-display); letter-spacing:-0.02em; }
   width: 120px;
   height: 120px;
   object-fit: contain;
-  animation: loadSpin 3s linear infinite;
-  filter: drop-shadow(0 0 40px rgba(216, 27, 96, 0.4)); /* Мягкое свечение */
-}
-
-@keyframes loadSpin {
-  to { transform: rotate(360deg); }
+  animation: loadSpin 6s linear infinite; /* 6 секунд на полный оборот (медленнее) */
+  filter: drop-shadow(0 0 40px rgba(216, 27, 96, 0.4)); 
+  
+  /* Явно центрируем картинку, даже если она не квадратная */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg); 
+  /* Обрати внимание: здесь мы убрали вращение из трансформа, чтобы анимация не ломалась, она крутится через @keyframes */
+  margin: 0;
 }
